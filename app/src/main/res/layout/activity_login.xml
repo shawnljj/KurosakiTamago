@@ -8,37 +8,38 @@
         android:id="@+id/imageView1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
         android:scaleType="center"
         android:layout_alignParentTop="true"
-        android:src="@drawable/login_bg" />
+        android:src="@drawable/login_bg"
+        android:contentDescription="login_bg" />
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
 
-    <RelativeLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?metaButtonBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:background="#00ffffff"
-            android:orientation="horizontal"
-        tools:ignore="UselessParent"
-        android:baselineAligned="false">
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="314dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp">
 
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal|bottom"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="90dp" />
+    </com.facebook.login.widget.LoginButton>
 
-    </RelativeLayout>
+    <Button
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:text="Continue as guest"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/login_button"
+        android:layout_alignStart="@+id/login_button"
+        android:layout_marginBottom="30dp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/login_app_name"
@@ -48,6 +49,10 @@
         android:textSize="50sp"
         android:textStyle="bold"
         android:typeface="sans"
-        android:layout_marginBottom="60dp" />
+        android:layout_marginBottom="60dp"
+        android:textAlignment="center"
+        android:elegantTextHeight="false"
+        android:autoText="false"
+        android:background="#57000000" />
 
 </FrameLayout>
