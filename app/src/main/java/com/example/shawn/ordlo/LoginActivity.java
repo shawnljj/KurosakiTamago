@@ -10,6 +10,7 @@ import android.view.View;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 
+// hi
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
